@@ -20,10 +20,10 @@
         }
 
         .bird {
-            background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
-            background-size: auto 100%;
-            width: 88px;
-            height: 125px;
+            width: 50px;
+            height: 30px;
+            background-color: #c08080; /* Brownish color for the bird */
+            clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
             will-change: transform; /* Use transform for smoother animation */
             position: absolute;
         }
@@ -46,19 +46,19 @@
 
         @keyframes fly-right-one {
             0% {
-                transform: translateX(-10vw) scale(0.3);
+                transform: translateX(-10vw);
             }
             100% {
-                transform: translateX(110vw) scale(0.6);
+                transform: translateX(110vw);
             }
         }
 
         @keyframes fly-right-two {
             0% {
-                transform: translateX(-10vw) scale(0.45);
+                transform: translateX(-10vw);
             }
             100% {
-                transform: translateX(110vw) scale(0.45);
+                transform: translateX(110vw);
             }
         }
     </style>
