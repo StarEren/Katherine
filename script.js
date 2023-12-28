@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Set the date when Katherine & Eren crossed paths
-    const startDate = new Date('2023-01-01T00:00:00Z');
+    // Set the imaginary date when Katherine & Eren crossed paths (Dec 16th)
+    const startDate = new Date('2022-12-16T00:00:00Z');
 
     function updateTimer() {
         const currentDate = new Date();
