@@ -3,74 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time since Eren & Katherine crossed paths..</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arima+Madurai:300">
-    <style>
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #ffe5e1; /* Light peach background */
-            font-family: 'Arima Madurai', cursive;
-            margin: 0;
-            overflow: hidden;
-        }
-
-        .bird {
-            width: 50px;
-            height: 30px;
-            background-color: #c08080; /* Brownish color for the bird */
-            clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
-            will-change: transform; /* Use transform for smoother animation */
-            position: absolute;
-        }
-
-        .bird--one {
-            animation: fly-right-one 15s linear infinite;
-        }
-
-        .bird--two {
-            animation: fly-right-two 16s linear infinite;
-        }
-
-        .bird--three {
-            animation: fly-right-one 14.6s linear 9.5s infinite;
-        }
-
-        .bird--four {
-            animation: fly-right-two 16s linear 10.25s infinite;
-        }
-
-        @keyframes fly-right-one {
-            0% {
-                transform: translateX(-10vw);
-            }
-            100% {
-                transform: translateX(110vw);
-            }
-        }
-
-        @keyframes fly-right-two {
-            0% {
-                transform: translateX(-10vw);
-            }
-            100% {
-                transform: translateX(110vw);
-            }
-        }
-    </style>
+    <title>Love Timer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="bird bird--one"></div>
-    <div class="bird bird--two"></div>
-    <div class="bird bird--three"></div>
-    <div class="bird bird--four"></div>
-    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
-        <h1 style="font-size: 3em; color: #cc4d6b; text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);">Time since Eren & Katherine crossed paths...</h1>
-        <div id="countup" style="font-size: 2em; color: #8d7f7f;">12 days, 6 hours, 42 minutes, 18 seconds</div>
+    <div class="container">
+        <h1 id="timer">00:00:00</h1>
+        <p class="message">Time since Katherine & Eren crossed paths...</p>
     </div>
     <script src="script.js"></script>
 </body>
