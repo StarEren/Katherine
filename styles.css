@@ -5,7 +5,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    height: 200vh; /* Increased height for demonstration */
     margin: 0;
     color: #880000; /* Darker color for text */
 }
@@ -24,7 +24,12 @@ body {
 }
 
 .heart-container {
-    margin-top: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1000;
 }
 
 .heart {
