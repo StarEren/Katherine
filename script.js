@@ -46,4 +46,15 @@ document.addEventListener('DOMContentLoaded', function () {
             message.classList.remove('hidden');
         }
     });
+
+    // Show heart after scrolling down
+    window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 200) {
+            heartContainer.style.display = 'block';
+        } else {
+            heartContainer.style.display = 'none';
+        }
+    });
 });
