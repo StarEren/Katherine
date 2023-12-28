@@ -26,3 +26,31 @@ body {
     font-size: 1.5em;
     color: #555;
 }
+body {
+    font-family: 'Your Romantic Font', cursive;
+    background-color: #ffc0cb; /* Pink background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    color: #880000; /* Darker color for text */
+}
+
+.container {
+    text-align: center;
+}
+
+.timer {
+    font-size: 2em; /* Adjusted font size */
+    margin-top: 10px; /* Adjusted margin */
+}
+
+.timer span {
+    margin: 0 5px; /* Adjusted spacing */
+}
+
+.message {
+    font-size: 1.5em;
+    color: #555;
+}
