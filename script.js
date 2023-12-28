@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
         const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
 
-        document.getElementById('timer').innerText = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
+        document.getElementById('hours').innerText = formatTime(hours);
+        document.getElementById('minutes').innerText = formatTime(minutes);
+        document.getElementById('seconds').innerText = formatTime(seconds);
     }
 
     function formatTime(time) {
