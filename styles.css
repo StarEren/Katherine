@@ -31,13 +31,35 @@ body {
     width: 50px;
     height: 50px;
     background-color: red;
-    transform: rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.heart.clicked {
-    transform: scale(1.2) rotate(-45deg);
+.heart::before,
+.heart::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    transform: rotate(45deg);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.heart::before {
+    top: -25px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: -25px;
+}
+
+.heart.clicked::before,
+.heart.clicked::after {
     background-color: #ff6666; /* Lighter red */
 }
 
