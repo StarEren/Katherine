@@ -42,7 +42,7 @@ body {
 
 @keyframes glow {
     0%, 100% {
-        box-shadow: -10px 10px 90px #f9003e; /* Increased shadow values */
+        box-shadow: -5px 5px 45px #f9003e; /* Increased shadow values */
     }
     50% {
         box-shadow: none;
