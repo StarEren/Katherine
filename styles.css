@@ -5,7 +5,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 200vh; /* Increased height for demonstration */
+    height: 70vh; /* Increased height for demonstration */
     margin: 0;
     color: #880000; /* Darkesr color for text */
     overflow: hidden; /* Hide overflow to prevent scroll bar */
@@ -13,7 +13,7 @@ body {
 
 .container {
     text-align: center;
-    margin-top: 50vh; /* Adjusted margin to start at the middle of the screen */
+    margin-top: 20vh; /* Adjusted margin to start at the middle of the screen */
     transform: translateY(-50%); /* Center the container */
     font-size: 1.5em;
 }
