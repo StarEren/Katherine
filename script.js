@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Set the date when we crossed paths
-    const startDate = new Date('2023-11-03T22:57:00Z');
+    const startDate = new Date('2023-12-03T22:57:00Z');
     let clickCount = 0;
 
     function updateTimer() {
