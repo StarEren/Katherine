@@ -7,15 +7,19 @@ body {
     flex-direction: column;
     height: 200vh; /* Increased height for demonstration */
     margin: 0;
-    color: #880000; /* Darker color for text */
+    color: #880000; /* Darkesr color for text */
+    overflow: hidden; /* Hide overflow to prevent scroll bar */
 }
 
 .container {
     text-align: center;
+    margin-top: 50vh; /* Adjusted margin to start at the middle of the screen */
+    transform: translateY(-50%); /* Center the container */
+    font-size: 1.5em;
 }
 
 .timer {
-    font-size: 2em; /* Adjusted font size */
+    font-size: 1.5em; /* Adjusted font size */
     margin-top: 10px; /* Adjusted margin */
 }
 
@@ -25,47 +29,85 @@ body {
 
 .heart-container {
     position: fixed;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: none;
+    display: block;
     z-index: 1000;
 }
 
 .heart {
-    width: 50px;
-    height: 50px;
-    background-color: red;
-    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 70px;
+    height: 70px;
+    background-color: rgb(255, 0, 85);
+    transform: translate(-50%, -50%);
     cursor: pointer;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transform: rotate(45deg); 
+    transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: glow 0.6s linear infinite
+}
+
+@keyframes heart {
+
+    0%{
+        transform: rotate(-45deg) scale(1.50);
+    }
+    80% {
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(1.50);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: -10px 10px 90px #f9003e; /* Increased shadow values */
+    }
+    50% {
+        box-shadow: none;
+    }
+}
+
+@keyframes beat {
+    0%, 100% {
+        transform: rotate(45deg) scale(1.07);
+    }
+    50% {
+        transform: rotate(45deg) scale(1);
+    }
 }
 
 .heart::before,
 .heart::after {
     content: '';
-    width: 50px;
-    height: 50px;
-    background-color: red;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(255, 0, 85);
     border-radius: 50%;
     position: absolute;
-    transform: rotate(45deg);
-    transition: background-color 0.3s ease-in-out;
+    transform: rotate(45deg); 
+    transition: background-color 0.1s ease-in-out;
+    
 }
 
 .heart::before {
-    top: -25px;
+    top: -35px;
     left: 0;
+    transform: rotate(45deg); 
 }
 
 .heart::after {
     top: 0;
-    left: -25px;
+    left: -35px;
+    transform: rotate(45deg); 
 }
 
 .heart.clicked::before,
-.heart.clicked::after {
-    background-color: #ff6666; /* Lighter red */
+.heart.clicked::after,
+.heart.clicked {
+    background-color: rgb(255, 30, 105); /* Lighter red */
+    animation: glow 0.6s linear infinite, beat 0.6s linear infinite;
 }
 
 .hidden {
@@ -75,4 +117,13 @@ body {
 
 #message {
     font-size: 1.2em;
+}
+
+.popup {
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.5s ease-in-out;
 }
