@@ -27,26 +27,6 @@ body {
     margin: 0 5px; /* Adjusted spacing */
 }
 
-.heart-container {
-    position: fixed;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    z-index: 1000;
-}
-
-.heart {
-    width: 70px;
-    height: 70px;
-    background-color: rgb(255, 0, 85);
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    transform: rotate(45deg); 
-    transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out, box-shadow 0.3s ease-in-out;
-    animation: glow 0.6s linear infinite
-}
-
 @keyframes heart {
 
     0%{
@@ -78,6 +58,26 @@ body {
     }
 }
 
+.heart-container {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    z-index: 1000;
+}
+
+.heart {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(255, 0, 85);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transform: rotate(45deg); 
+    transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: glow 0.6s linear infinite
+}
+
 .heart::before,
 .heart::after {
     content: '';
@@ -87,7 +87,8 @@ body {
     border-radius: 50%;
     position: absolute;
     transform: rotate(45deg); 
-    transition: background-color 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: glow 0.6s linear infinite
     
 }
 
@@ -101,13 +102,6 @@ body {
     top: 0;
     left: -35px;
     transform: rotate(45deg); 
-}
-
-.heart.clicked::before,
-.heart.clicked::after,
-.heart.clicked {
-    background-color: rgb(255, 30, 105); /* Lighter red */
-    animation: glow 0.6s linear infinite, beat 0.6s linear infinite;
 }
 
 .hidden {
@@ -126,4 +120,20 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: opacity 0.5s ease-in-out;
+}
+
+.heart.clicked {
+    opacity: 0.7; /* Adjusted opacity when clicked */
+    animation: beat 0.3s ease-in-out; /* Added beat animation */
+}
+
+/* Add the following style to the .heart class */
+.heart.clicked::before,
+.heart.clicked::after {
+    animation: none; /* Stop the glow animation when clicked */
+}
+
+.katherine {
+    cursor: pointer;
+    text-decoration: underline; /* Optional: Add underline for visual indication of a link */
 }

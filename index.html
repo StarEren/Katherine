@@ -8,25 +8,35 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Your+Romantic+Font">
 </head>
 <body>
-    <div class="container">
-        <p class="message">Time since Eren & Katherine crossed paths...</p>
-        <div id="timer" class="timer">
-            <span id="hours">00</span> hours
-            <span id="minutes">00</span> minutes
-            <span id="seconds">00</span> seconds
-        </div>
+
+<audio id="backgroundMusic" autoplay loop>
+    <source src="/Users/akifyilmaz/Desktop/Katherine/StrawberryGuy.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<div class="container">
+    <p class="message">Time since <span id="nameClick">Eren & <span id="katherine">Katherine</span></span> crossed paths...</p>
+    <div id="timer" class="timer">
+        <span id="hours">00</span> hours
+        <span id="minutes">00</span> minutes
+        <span id="seconds">00</span> seconds
     </div>
-    <div class="heart-container" id="heartContainer">
-        <div class="heart" id="heart"></div>
-    </div>
-    <div id="message" class="hidden">
-        <p>
-            "nepenthe" (n.)<br>
-            An ancient Greek word.<br>
-            1. A drug, or the plant providing it, that ancient writers referred to as a means of forgetting grief or troubles<br>
-            2. Anything that produces sleep, forgetfulness, or pleasurable dreaminess<br>
-        </p>
-    </div>
-    <script src="script.js"></script>
+</div>
+
+<div class="heart-container" id="heartContainer">
+    <div class="heart" id="heart"></div>
+</div>
+
+<div id="message" class="hidden">
+    <p>
+        nepenthe (n.)<br>
+        An ancient Greek word.<br>
+        1. A drug, or the plant providing it, that ancient writers referred to as a means of forgetting grief or troubles<br>
+        2. Anything that produces sleep, forgetfulness, or pleasurable dreaminess<br>
+    </p>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
