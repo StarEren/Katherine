@@ -133,7 +133,6 @@ body {
     animation: none; /* Stop the glow animation when clicked */
 }
 
-.katherine {
+.clickable {
     cursor: pointer;
-    text-decoration: underline; /* Optional: Add underline for visual indication of a link */
 }

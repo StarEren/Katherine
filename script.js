@@ -53,8 +53,9 @@ document.addEventListener('DOMContentLoaded', function () {
             ...Array.from(document.querySelectorAll('.popup')),
             document.getElementById('timer'),
             document.getElementById('message'),
-            document.getElementById('heartContainer'), // Exclude heart container
-            // Exclude other text elements if needed
+            document.getElementById('heartContainer'),
+            document.getElementById('container'),
+
         ].map((existingElement) => {
             if (existingElement) {
                 const rect = existingElement.getBoundingClientRect();
@@ -169,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "You're the reason I believe in love.",
             "Your touch is the medicine that heals my soul.",
             "I love you not only for who you are but for who I am with you.",
-            "You're the pot of gold at the end of my rainbow.",
+            "I love you.",
             "Your love is the fuel that propels me to new heights.",
             "With you, life's challenges become adventures.",
             "You're the inspiration behind my every smile.",
@@ -215,18 +216,24 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 1000);
     });
 
-    // Add click event listener to "Katherine"
     const katherineElement = document.getElementById('katherine');
-    katherineElement.addEventListener('click', function () {
-  
+    katherineElement.classList.add('clickable'); // Add the 'clickable' class for styling
+
+    function handleKatherineClick() {
         const nepentheMessage = document.getElementById('message');
         // Remove the heart element
         const heartContainer = document.getElementById('heartContainer');
         const heart = document.getElementById('heart');
         heartContainer.removeChild(heart);
-         // Show the nepenthe message
+        // Show the nepenthe message
         nepentheMessage.classList.remove('hidden');
-    });
+
+        // Remove click event listener and 'clickable' class after it's clicked
+        katherineElement.removeEventListener('click', handleKatherineClick);
+        katherineElement.classList.remove('clickable');
+    }
+
+    katherineElement.addEventListener('click', handleKatherineClick);
 
     // Add this part for the heart to fade a bit after clicking
     heart.addEventListener('click', function () {
@@ -239,9 +246,5 @@ document.addEventListener('DOMContentLoaded', function () {
             heart.style.opacity = '1';
         }, 1000);
     });
-    
-    // Play background music
-    const backgroundMusic = document.getElementById('backgroundMusic');
-    backgroundMusic.volume = 0.5; // Adjust the volume if needed
-    backgroundMusic.play();
+
 });
