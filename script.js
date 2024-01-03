@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "You're the magic that turns the ordinary into extraordinary.",
             "Being with you is like a beautiful dream I never want to end.",
             "You're the sweet surprise that life blessed me with.",
-            "You're the answer to all my prayers.",
+            "You're the answer to my problems.",
             "Your love is the compass that guides me home.",
             "Our connection is a flame that never dims.",
             "You're the poetry my heart never knew it could write.",
